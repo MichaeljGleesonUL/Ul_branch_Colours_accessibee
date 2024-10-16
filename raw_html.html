@@ -1,0 +1,3269 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+  
+  
+    <title>CodePen - Accessible Contrast UL</title>
+  
+      <link rel="canonical" href="https://codepen.io/MichaealJGleeson/pen/JjQLrXV">
+    
+    
+    
+    
+  <style>
+        .grid {
+              display: grid;
+              gap: 10px;
+            }
+          .grid-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              padding: 20px;
+              font-family: Arial, sans-serif;
+              border: 1px solid #ccc;
+              text-align: center;
+          }
+          .highlight {
+              border: 10px solid green; /* Highlight with a green border */
+          }
+          .loading {
+              font-size: 0.8em;
+  /*             color: #888; */
+          }
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body translate="no" data-new-gr-c-s-check-loaded="14.1199.0" data-gr-ext-installed="">
+    
+      <div id="colorGrid" class="grid" style="grid-template-columns: repeat(20, 1fr);"><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(255, 255, 255);">
+                          <div>#ffffff / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(0, 163, 224);">
+                          <div>#ffffff / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.87<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(0, 125, 186);">
+                          <div>#ffffff / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.52<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(45, 89, 128);">
+                          <div>#ffffff / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(19, 41, 75);">
+                          <div>#ffffff / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 14.5<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(0, 88, 68);">
+                          <div>#ffffff / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 8.46<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(0, 177, 64);">
+                          <div>#ffffff / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(0, 55, 38);">
+                          <div>#ffffff / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 13.3<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(255, 199, 44);">
+                          <div>#ffffff / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(255, 163, 0);">
+                          <div>#ffffff / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(212, 93, 0);">
+                          <div>#ffffff / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.91<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(203, 51, 59);">
+                          <div>#ffffff / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.15<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(227, 28, 121);">
+                          <div>#ffffff / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.46<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(111, 38, 61);">
+                          <div>#ffffff / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 10.3<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(137, 83, 47);">
+                          <div>#ffffff / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.28<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(145, 157, 157);">
+                          <div>#ffffff / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 255, 255); color: rgb(112, 115, 114);">
+                          <div>#ffffff / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.78<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(80, 87, 89);">
+                          <div>#ffffff / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.37<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(55, 58, 54);">
+                          <div>#ffffff / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 11.5<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                          <div>#ffffff / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 21<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(255, 255, 255);">
+                          <div>#00A3E0 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.87<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(0, 163, 224);">
+                          <div>#00A3E0 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(0, 125, 186);">
+                          <div>#00A3E0 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(45, 89, 128);">
+                          <div>#00A3E0 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(19, 41, 75);">
+                          <div>#00A3E0 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.05<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(0, 88, 68);">
+                          <div>#00A3E0 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.95<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(0, 177, 64);">
+                          <div>#00A3E0 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(0, 55, 38);">
+                          <div>#00A3E0 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.64<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(255, 199, 44);">
+                          <div>#00A3E0 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.83<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(255, 163, 0);">
+                          <div>#00A3E0 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.43<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(212, 93, 0);">
+                          <div>#00A3E0 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.36<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(203, 51, 59);">
+                          <div>#00A3E0 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(227, 28, 121);">
+                          <div>#00A3E0 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.55<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(111, 38, 61);">
+                          <div>#00A3E0 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.62<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(137, 83, 47);">
+                          <div>#00A3E0 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.18<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(145, 157, 157);">
+                          <div>#00A3E0 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(112, 115, 114);">
+                          <div>#00A3E0 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.66<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(80, 87, 89);">
+                          <div>#00A3E0 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 163, 224); color: rgb(55, 58, 54);">
+                          <div>#00A3E0 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.01<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 163, 224); color: rgb(0, 0, 0);">
+                          <div>#00A3E0 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.31<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(255, 255, 255);">
+                          <div>#007DBA / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.52<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 163, 224);">
+                          <div>#007DBA / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 125, 186);">
+                          <div>#007DBA / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(45, 89, 128);">
+                          <div>#007DBA / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.62<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(19, 41, 75);">
+                          <div>#007DBA / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.20<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 88, 68);">
+                          <div>#007DBA / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.87<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 177, 64);">
+                          <div>#007DBA / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 55, 38);">
+                          <div>#007DBA / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.94<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(255, 199, 44);">
+                          <div>#007DBA / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.89<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(255, 163, 0);">
+                          <div>#007DBA / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.25<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(212, 93, 0);">
+                          <div>#007DBA / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(203, 51, 59);">
+                          <div>#007DBA / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.13<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(227, 28, 121);">
+                          <div>#007DBA / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.01<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(111, 38, 61);">
+                          <div>#007DBA / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.29<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(137, 83, 47);">
+                          <div>#007DBA / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.38<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(145, 157, 157);">
+                          <div>#007DBA / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.61<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(112, 115, 114);">
+                          <div>#007DBA / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.05<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(80, 87, 89);">
+                          <div>#007DBA / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.62<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(55, 58, 54);">
+                          <div>#007DBA / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.54<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 125, 186); color: rgb(0, 0, 0);">
+                          <div>#007DBA / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.64<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(45, 89, 128); color: rgb(255, 255, 255);">
+                          <div>#2D5980 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 163, 224);">
+                          <div>#2D5980 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 125, 186);">
+                          <div>#2D5980 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.62<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(45, 89, 128);">
+                          <div>#2D5980 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(19, 41, 75);">
+                          <div>#2D5980 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.97<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 88, 68);">
+                          <div>#2D5980 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 177, 64);">
+                          <div>#2D5980 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 55, 38);">
+                          <div>#2D5980 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.81<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(255, 199, 44);">
+                          <div>#2D5980 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.71<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(255, 163, 0);">
+                          <div>#2D5980 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.67<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(212, 93, 0);">
+                          <div>#2D5980 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.88<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(203, 51, 59);">
+                          <div>#2D5980 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.42<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(227, 28, 121);">
+                          <div>#2D5980 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(111, 38, 61);">
+                          <div>#2D5980 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.41<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(137, 83, 47);">
+                          <div>#2D5980 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.17<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(145, 157, 157);">
+                          <div>#2D5980 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.63<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(112, 115, 114);">
+                          <div>#2D5980 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.53<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(80, 87, 89);">
+                          <div>#2D5980 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(55, 58, 54);">
+                          <div>#2D5980 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(45, 89, 128); color: rgb(0, 0, 0);">
+                          <div>#2D5980 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(19, 41, 75); color: rgb(255, 255, 255);">
+                          <div>#13294B / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 14.5<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 163, 224);">
+                          <div>#13294B / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.05<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 125, 186);">
+                          <div>#13294B / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.20<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(45, 89, 128);">
+                          <div>#13294B / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.97<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(19, 41, 75);">
+                          <div>#13294B / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 88, 68);">
+                          <div>#13294B / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.71<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 177, 64);">
+                          <div>#13294B / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.09<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 55, 38);">
+                          <div>#13294B / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.08<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(19, 41, 75); color: rgb(255, 199, 44);">
+                          <div>#13294B / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 9.30<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(19, 41, 75); color: rgb(255, 163, 0);">
+                          <div>#13294B / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.25<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(212, 93, 0);">
+                          <div>#13294B / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.70<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(203, 51, 59);">
+                          <div>#13294B / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.81<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(227, 28, 121);">
+                          <div>#13294B / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.25<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(111, 38, 61);">
+                          <div>#13294B / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(137, 83, 47);">
+                          <div>#13294B / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(145, 157, 157);">
+                          <div>#13294B / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.19<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(112, 115, 114);">
+                          <div>#13294B / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.03<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(80, 87, 89);">
+                          <div>#13294B / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.96<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(55, 58, 54);">
+                          <div>#13294B / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.25<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(19, 41, 75); color: rgb(0, 0, 0);">
+                          <div>#13294B / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.44<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 88, 68); color: rgb(255, 255, 255);">
+                          <div>#005844 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 8.46<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 163, 224);">
+                          <div>#005844 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.95<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 125, 186);">
+                          <div>#005844 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.87<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(45, 89, 128);">
+                          <div>#005844 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(19, 41, 75);">
+                          <div>#005844 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.71<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 88, 68);">
+                          <div>#005844 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 177, 64);">
+                          <div>#005844 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.96<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 55, 38);">
+                          <div>#005844 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(255, 199, 44);">
+                          <div>#005844 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.42<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(255, 163, 0);">
+                          <div>#005844 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.23<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(212, 93, 0);">
+                          <div>#005844 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.16<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(203, 51, 59);">
+                          <div>#005844 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.64<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(227, 28, 121);">
+                          <div>#005844 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.89<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(111, 38, 61);">
+                          <div>#005844 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(137, 83, 47);">
+                          <div>#005844 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.34<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(145, 157, 157);">
+                          <div>#005844 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.03<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(112, 115, 114);">
+                          <div>#005844 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.76<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(80, 87, 89);">
+                          <div>#005844 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.14<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(55, 58, 54);">
+                          <div>#005844 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.36<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 88, 68); color: rgb(0, 0, 0);">
+                          <div>#005844 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.47<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(255, 255, 255);">
+                          <div>#00B140 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(0, 163, 224);">
+                          <div>#00B140 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(0, 125, 186);">
+                          <div>#00B140 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(45, 89, 128);">
+                          <div>#00B140 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(19, 41, 75);">
+                          <div>#00B140 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.09<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(0, 88, 68);">
+                          <div>#00B140 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.96<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(0, 177, 64);">
+                          <div>#00B140 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(0, 55, 38);">
+                          <div>#00B140 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.67<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(255, 199, 44);">
+                          <div>#00B140 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.82<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(255, 163, 0);">
+                          <div>#00B140 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.42<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(212, 93, 0);">
+                          <div>#00B140 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.37<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(203, 51, 59);">
+                          <div>#00B140 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.80<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(227, 28, 121);">
+                          <div>#00B140 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(111, 38, 61);">
+                          <div>#00B140 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.64<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(137, 83, 47);">
+                          <div>#00B140 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.20<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(145, 157, 157);">
+                          <div>#00B140 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(112, 115, 114);">
+                          <div>#00B140 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.67<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(80, 87, 89);">
+                          <div>#00B140 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 177, 64); color: rgb(55, 58, 54);">
+                          <div>#00B140 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.04<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 177, 64); color: rgb(0, 0, 0);">
+                          <div>#00B140 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 55, 38); color: rgb(255, 255, 255);">
+                          <div>#003726 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 13.3<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 163, 224);">
+                          <div>#003726 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.64<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 125, 186);">
+                          <div>#003726 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.94<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(45, 89, 128);">
+                          <div>#003726 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.81<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(19, 41, 75);">
+                          <div>#003726 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.08<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 88, 68);">
+                          <div>#003726 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 177, 64);">
+                          <div>#003726 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.67<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 55, 38);">
+                          <div>#003726 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 55, 38); color: rgb(255, 199, 44);">
+                          <div>#003726 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 8.54<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(255, 163, 0);">
+                          <div>#003726 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.66<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(212, 93, 0);">
+                          <div>#003726 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.40<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(203, 51, 59);">
+                          <div>#003726 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(227, 28, 121);">
+                          <div>#003726 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.99<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(111, 38, 61);">
+                          <div>#003726 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.28<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(137, 83, 47);">
+                          <div>#003726 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.12<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(145, 157, 157);">
+                          <div>#003726 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.77<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(112, 115, 114);">
+                          <div>#003726 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.78<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(80, 87, 89);">
+                          <div>#003726 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.80<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(55, 58, 54);">
+                          <div>#003726 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 55, 38); color: rgb(0, 0, 0);">
+                          <div>#003726 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(255, 255, 255);">
+                          <div>#FFC72C / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(0, 163, 224);">
+                          <div>#FFC72C / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.83<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(0, 125, 186);">
+                          <div>#FFC72C / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.89<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(45, 89, 128);">
+                          <div>#FFC72C / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.71<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 199, 44); color: rgb(19, 41, 75);">
+                          <div>#FFC72C / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 9.30<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(0, 88, 68);">
+                          <div>#FFC72C / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.42<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(0, 177, 64);">
+                          <div>#FFC72C / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.82<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 199, 44); color: rgb(0, 55, 38);">
+                          <div>#FFC72C / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 8.54<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(255, 199, 44);">
+                          <div>#FFC72C / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(255, 163, 0);">
+                          <div>#FFC72C / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.28<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(212, 93, 0);">
+                          <div>#FFC72C / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.50<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(203, 51, 59);">
+                          <div>#FFC72C / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.30<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(227, 28, 121);">
+                          <div>#FFC72C / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(111, 38, 61);">
+                          <div>#FFC72C / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.66<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(137, 83, 47);">
+                          <div>#FFC72C / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.02<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(145, 157, 157);">
+                          <div>#FFC72C / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(112, 115, 114);">
+                          <div>#FFC72C / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.06<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 199, 44); color: rgb(80, 87, 89);">
+                          <div>#FFC72C / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.72<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 199, 44); color: rgb(55, 58, 54);">
+                          <div>#FFC72C / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.39<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 199, 44); color: rgb(0, 0, 0);">
+                          <div>#FFC72C / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 13.4<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(255, 255, 255);">
+                          <div>#FFA300 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(0, 163, 224);">
+                          <div>#FFA300 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.43<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(0, 125, 186);">
+                          <div>#FFA300 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.25<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(45, 89, 128);">
+                          <div>#FFA300 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.67<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 163, 0); color: rgb(19, 41, 75);">
+                          <div>#FFA300 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.25<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(0, 88, 68);">
+                          <div>#FFA300 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.23<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(0, 177, 64);">
+                          <div>#FFA300 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.42<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(0, 55, 38);">
+                          <div>#FFA300 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.66<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(255, 199, 44);">
+                          <div>#FFA300 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.28<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(255, 163, 0);">
+                          <div>#FFA300 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(212, 93, 0);">
+                          <div>#FFA300 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.95<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(203, 51, 59);">
+                          <div>#FFA300 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(227, 28, 121);">
+                          <div>#FFA300 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(111, 38, 61);">
+                          <div>#FFA300 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.19<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(137, 83, 47);">
+                          <div>#FFA300 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.13<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(145, 157, 157);">
+                          <div>#FFA300 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(112, 115, 114);">
+                          <div>#FFA300 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(80, 87, 89);">
+                          <div>#FFA300 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.68<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(255, 163, 0); color: rgb(55, 58, 54);">
+                          <div>#FFA300 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.76<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(255, 163, 0); color: rgb(0, 0, 0);">
+                          <div>#FFA300 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 10.4<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(255, 255, 255);">
+                          <div>#D45D00 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.91<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 163, 224);">
+                          <div>#D45D00 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.36<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 125, 186);">
+                          <div>#D45D00 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(45, 89, 128);">
+                          <div>#D45D00 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.88<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(19, 41, 75);">
+                          <div>#D45D00 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.70<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 88, 68);">
+                          <div>#D45D00 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.16<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 177, 64);">
+                          <div>#D45D00 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.37<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 55, 38);">
+                          <div>#D45D00 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.40<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(255, 199, 44);">
+                          <div>#D45D00 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.50<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(255, 163, 0);">
+                          <div>#D45D00 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.95<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(212, 93, 0);">
+                          <div>#D45D00 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(203, 51, 59);">
+                          <div>#D45D00 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(227, 28, 121);">
+                          <div>#D45D00 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.13<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(111, 38, 61);">
+                          <div>#D45D00 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(137, 83, 47);">
+                          <div>#D45D00 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.60<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(145, 157, 157);">
+                          <div>#D45D00 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(112, 115, 114);">
+                          <div>#D45D00 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(80, 87, 89);">
+                          <div>#D45D00 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.88<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(55, 58, 54);">
+                          <div>#D45D00 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.94<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(212, 93, 0); color: rgb(0, 0, 0);">
+                          <div>#D45D00 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(255, 255, 255);">
+                          <div>#CB333B / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.15<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 163, 224);">
+                          <div>#CB333B / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 125, 186);">
+                          <div>#CB333B / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.13<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(45, 89, 128);">
+                          <div>#CB333B / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.42<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(19, 41, 75);">
+                          <div>#CB333B / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.81<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 88, 68);">
+                          <div>#CB333B / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.64<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 177, 64);">
+                          <div>#CB333B / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.80<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 55, 38);">
+                          <div>#CB333B / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(255, 199, 44);">
+                          <div>#CB333B / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.30<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(255, 163, 0);">
+                          <div>#CB333B / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(212, 93, 0);">
+                          <div>#CB333B / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(203, 51, 59);">
+                          <div>#CB333B / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(227, 28, 121);">
+                          <div>#CB333B / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(111, 38, 61);">
+                          <div>#CB333B / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.01<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(137, 83, 47);">
+                          <div>#CB333B / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.21<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(145, 157, 157);">
+                          <div>#CB333B / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.84<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(112, 115, 114);">
+                          <div>#CB333B / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.07<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(80, 87, 89);">
+                          <div>#CB333B / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.43<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(55, 58, 54);">
+                          <div>#CB333B / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.23<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(203, 51, 59); color: rgb(0, 0, 0);">
+                          <div>#CB333B / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.07<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(255, 255, 255);">
+                          <div>#E31C79 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.46<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 163, 224);">
+                          <div>#E31C79 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.55<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 125, 186);">
+                          <div>#E31C79 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.01<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(45, 89, 128);">
+                          <div>#E31C79 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(19, 41, 75);">
+                          <div>#E31C79 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.25<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 88, 68);">
+                          <div>#E31C79 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.89<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 177, 64);">
+                          <div>#E31C79 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 55, 38);">
+                          <div>#E31C79 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.99<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(255, 199, 44);">
+                          <div>#E31C79 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(255, 163, 0);">
+                          <div>#E31C79 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(212, 93, 0);">
+                          <div>#E31C79 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.13<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(203, 51, 59);">
+                          <div>#E31C79 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(227, 28, 121);">
+                          <div>#E31C79 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(111, 38, 61);">
+                          <div>#E31C79 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.33<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(137, 83, 47);">
+                          <div>#E31C79 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(145, 157, 157);">
+                          <div>#E31C79 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.59<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(112, 115, 114);">
+                          <div>#E31C79 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.07<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(80, 87, 89);">
+                          <div>#E31C79 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(55, 58, 54);">
+                          <div>#E31C79 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(227, 28, 121); color: rgb(0, 0, 0);">
+                          <div>#E31C79 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.70<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(111, 38, 61); color: rgb(255, 255, 255);">
+                          <div>#6F263D / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 10.3<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 163, 224);">
+                          <div>#6F263D / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.62<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 125, 186);">
+                          <div>#6F263D / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.29<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(45, 89, 128);">
+                          <div>#6F263D / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.41<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(19, 41, 75);">
+                          <div>#6F263D / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 88, 68);">
+                          <div>#6F263D / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 177, 64);">
+                          <div>#6F263D / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.64<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 55, 38);">
+                          <div>#6F263D / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.28<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(255, 199, 44);">
+                          <div>#6F263D / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.66<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(255, 163, 0);">
+                          <div>#6F263D / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.19<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(212, 93, 0);">
+                          <div>#6F263D / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(203, 51, 59);">
+                          <div>#6F263D / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.01<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(227, 28, 121);">
+                          <div>#6F263D / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.33<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(111, 38, 61);">
+                          <div>#6F263D / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(137, 83, 47);">
+                          <div>#6F263D / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(145, 157, 157);">
+                          <div>#6F263D / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.71<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(112, 115, 114);">
+                          <div>#6F263D / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.16<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(80, 87, 89);">
+                          <div>#6F263D / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(55, 58, 54);">
+                          <div>#6F263D / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.10<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(111, 38, 61); color: rgb(0, 0, 0);">
+                          <div>#6F263D / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(255, 255, 255);">
+                          <div>#89532F / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 6.28<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 163, 224);">
+                          <div>#89532F / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.18<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 125, 186);">
+                          <div>#89532F / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.38<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(45, 89, 128);">
+                          <div>#89532F / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.17<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(19, 41, 75);">
+                          <div>#89532F / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 88, 68);">
+                          <div>#89532F / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.34<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 177, 64);">
+                          <div>#89532F / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.20<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 55, 38);">
+                          <div>#89532F / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.12<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(255, 199, 44);">
+                          <div>#89532F / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.02<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(255, 163, 0);">
+                          <div>#89532F / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.13<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(212, 93, 0);">
+                          <div>#89532F / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.60<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(203, 51, 59);">
+                          <div>#89532F / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.21<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(227, 28, 121);">
+                          <div>#89532F / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(111, 38, 61);">
+                          <div>#89532F / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(137, 83, 47);">
+                          <div>#89532F / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(145, 157, 157);">
+                          <div>#89532F / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.24<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(112, 115, 114);">
+                          <div>#89532F / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(80, 87, 89);">
+                          <div>#89532F / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.17<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(55, 58, 54);">
+                          <div>#89532F / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.83<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(137, 83, 47); color: rgb(0, 0, 0);">
+                          <div>#89532F / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.34<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(255, 255, 255);">
+                          <div>#919D9D / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(0, 163, 224);">
+                          <div>#919D9D / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(0, 125, 186);">
+                          <div>#919D9D / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.61<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(45, 89, 128);">
+                          <div>#919D9D / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.63<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(19, 41, 75);">
+                          <div>#919D9D / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.19<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(0, 88, 68);">
+                          <div>#919D9D / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.03<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(0, 177, 64);">
+                          <div>#919D9D / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(0, 55, 38);">
+                          <div>#919D9D / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.77<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(255, 199, 44);">
+                          <div>#919D9D / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.79<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(255, 163, 0);">
+                          <div>#919D9D / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(212, 93, 0);">
+                          <div>#919D9D / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(203, 51, 59);">
+                          <div>#919D9D / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.84<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(227, 28, 121);">
+                          <div>#919D9D / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.59<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(111, 38, 61);">
+                          <div>#919D9D / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.71<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(137, 83, 47);">
+                          <div>#919D9D / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.24<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(145, 157, 157);">
+                          <div>#919D9D / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(112, 115, 114);">
+                          <div>#919D9D / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.71<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(80, 87, 89);">
+                          <div>#919D9D / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.63<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(145, 157, 157); color: rgb(55, 58, 54);">
+                          <div>#919D9D / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.12<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(145, 157, 157); color: rgb(0, 0, 0);">
+                          <div>#919D9D / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.51<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(255, 255, 255);">
+                          <div>#707372 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.78<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 163, 224);">
+                          <div>#707372 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.66<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 125, 186);">
+                          <div>#707372 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.05<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(45, 89, 128);">
+                          <div>#707372 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.53<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(19, 41, 75);">
+                          <div>#707372 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.03<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 88, 68);">
+                          <div>#707372 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.76<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 177, 64);">
+                          <div>#707372 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.67<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 55, 38);">
+                          <div>#707372 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.78<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(255, 199, 44);">
+                          <div>#707372 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.06<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(255, 163, 0);">
+                          <div>#707372 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.39<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(212, 93, 0);">
+                          <div>#707372 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.22<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(203, 51, 59);">
+                          <div>#707372 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.07<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(227, 28, 121);">
+                          <div>#707372 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.07<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(111, 38, 61);">
+                          <div>#707372 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.16<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(137, 83, 47);">
+                          <div>#707372 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.31<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(145, 157, 157);">
+                          <div>#707372 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.71<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(112, 115, 114);">
+                          <div>#707372 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(80, 87, 89);">
+                          <div>#707372 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.53<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(55, 58, 54);">
+                          <div>#707372 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(112, 115, 114); color: rgb(0, 0, 0);">
+                          <div>#707372 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.38<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(80, 87, 89); color: rgb(255, 255, 255);">
+                          <div>#505759 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.37<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 163, 224);">
+                          <div>#505759 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 125, 186);">
+                          <div>#505759 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.62<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(45, 89, 128);">
+                          <div>#505759 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.00<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(19, 41, 75);">
+                          <div>#505759 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.96<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 88, 68);">
+                          <div>#505759 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.14<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 177, 64);">
+                          <div>#505759 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 55, 38);">
+                          <div>#505759 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.80<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(255, 199, 44);">
+                          <div>#505759 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.72<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(255, 163, 0);">
+                          <div>#505759 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.68<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(212, 93, 0);">
+                          <div>#505759 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.88<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(203, 51, 59);">
+                          <div>#505759 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.43<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(227, 28, 121);">
+                          <div>#505759 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.65<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(111, 38, 61);">
+                          <div>#505759 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(137, 83, 47);">
+                          <div>#505759 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.17<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(145, 157, 157);">
+                          <div>#505759 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.63<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(112, 115, 114);">
+                          <div>#505759 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.53<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(80, 87, 89);">
+                          <div>#505759 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(55, 58, 54);">
+                          <div>#505759 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(80, 87, 89); color: rgb(0, 0, 0);">
+                          <div>#505759 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.84<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(55, 58, 54); color: rgb(255, 255, 255);">
+                          <div>#373A36 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 11.5<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 163, 224);">
+                          <div>#373A36 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.01<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 125, 186);">
+                          <div>#373A36 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.54<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(45, 89, 128);">
+                          <div>#373A36 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(19, 41, 75);">
+                          <div>#373A36 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.25<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 88, 68);">
+                          <div>#373A36 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.36<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 177, 64);">
+                          <div>#373A36 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.04<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 55, 38);">
+                          <div>#373A36 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.15<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(55, 58, 54); color: rgb(255, 199, 44);">
+                          <div>#373A36 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.39<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(255, 163, 0);">
+                          <div>#373A36 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.76<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(212, 93, 0);">
+                          <div>#373A36 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.94<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(203, 51, 59);">
+                          <div>#373A36 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.23<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(227, 28, 121);">
+                          <div>#373A36 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.58<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(111, 38, 61);">
+                          <div>#373A36 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.10<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(137, 83, 47);">
+                          <div>#373A36 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.83<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(145, 157, 157);">
+                          <div>#373A36 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.12<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(112, 115, 114);">
+                          <div>#373A36 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.40<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(80, 87, 89);">
+                          <div>#373A36 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.56<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(55, 58, 54);">
+                          <div>#373A36 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(55, 58, 54); color: rgb(0, 0, 0);">
+                          <div>#373A36 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.82<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">
+                          <div>#000000 / #ffffff</div>
+                          <div class="loading">
+                          Contrast Ratio: 21<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(0, 163, 224);">
+                          <div>#000000 / #00A3E0</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.31<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(0, 125, 186);">
+                          <div>#000000 / #007DBA</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.64<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(45, 89, 128);">
+                          <div>#000000 / #2D5980</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.85<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(19, 41, 75);">
+                          <div>#000000 / #13294B</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.44<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(0, 88, 68);">
+                          <div>#000000 / #005844</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.47<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(0, 177, 64);">
+                          <div>#000000 / #00B140</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(0, 55, 38);">
+                          <div>#000000 / #003726</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.57<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(255, 199, 44);">
+                          <div>#000000 / #FFC72C</div>
+                          <div class="loading">
+                          Contrast Ratio: 13.4<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(255, 163, 0);">
+                          <div>#000000 / #FFA300</div>
+                          <div class="loading">
+                          Contrast Ratio: 10.4<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(212, 93, 0);">
+                          <div>#000000 / #D45D00</div>
+                          <div class="loading">
+                          Contrast Ratio: 5.36<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(203, 51, 59);">
+                          <div>#000000 / #CB333B</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.07<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(227, 28, 121);">
+                          <div>#000000 / #E31C79</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.70<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(111, 38, 61);">
+                          <div>#000000 / #6F263D</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.02<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(137, 83, 47);">
+                          <div>#000000 / #89532F</div>
+                          <div class="loading">
+                          Contrast Ratio: 3.34<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item highlight" style="background-color: rgb(0, 0, 0); color: rgb(145, 157, 157);">
+                          <div>#000000 / #919D9D</div>
+                          <div class="loading">
+                          Contrast Ratio: 7.51<br>
+                          AA Large Text: pass<br>
+                          AA: pass<br>
+                          AAA: pass
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(112, 115, 114);">
+                          <div>#000000 / #707372</div>
+                          <div class="loading">
+                          Contrast Ratio: 4.38<br>
+                          AA Large Text: pass<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(80, 87, 89);">
+                          <div>#000000 / #505759</div>
+                          <div class="loading">
+                          Contrast Ratio: 2.84<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(55, 58, 54);">
+                          <div>#000000 / #373A36</div>
+                          <div class="loading">
+                          Contrast Ratio: 1.82<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div><div class="grid-item" style="background-color: rgb(0, 0, 0); color: rgb(0, 0, 0);">
+                          <div>#000000 / #000000</div>
+                          <div class="loading">
+                          Contrast Ratio: 1<br>
+                          AA Large Text: fail<br>
+                          AA: fail<br>
+                          AAA: fail
+                      </div>
+                      </div></div>
+  
+     
+  
+    
+       
+  
+    
+  
+  
+  

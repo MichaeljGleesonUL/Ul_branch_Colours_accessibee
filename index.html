@@ -1,0 +1,132 @@
+<html>
+<head>
+</head>
+<style>
+    .grid {
+          display: grid;
+          gap: 10px;
+        }
+      .grid-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px;
+          font-family: Arial, sans-serif;
+          border: 1px solid #ccc;
+          text-align: center;
+      }
+      .highlight {
+          border: 10px solid green; /* Highlight with a green border */
+      }
+      .loading {
+          font-size: 0.8em;
+/*             color: #888; */
+      }
+</style>
+<body>
+    <div id="colorGrid" class="grid"></div>
+
+
+<script>
+// List of hex color values
+const colors = [
+  "#ffffff", "#00A3E0", "#007DBA", "#2D5980", "#13294B",
+  "#005844", "#00B140", "#003726",
+  "#FFC72C", "#FFA300", "#D45D00", "#CB333B", "#E31C79", "#6F263D", "#89532F",
+  "#919D9D", "#707372", "#505759", "#373A36", "#000000"
+];
+
+// Function to fetch contrast ratio from the WebAIM API
+async function fetchContrastDetails(fcolor, bcolor) {
+  const response = await fetch(`https://webaim.org/resources/contrastchecker/?fcolor=${fcolor.replace('#', '')}&bcolor=${bcolor.replace('#', '')}&api`);
+  const data = await response.json();
+  return data;
+}
+
+// Function to create the grid
+async function createColorGrid(colors) {
+  const gridContainer = document.getElementById("colorGrid");
+
+  // Set grid template columns to include space for the header column
+  gridContainer.style.gridTemplateColumns = `repeat(${colors.length + 1}, 1fr)`;
+
+  // Create the top-left corner block (empty)
+  const cornerBlock = document.createElement("div");
+  cornerBlock.className = "grid-item header-item";
+  cornerBlock.style.backgroundColor = "#e0e0e0";
+  gridContainer.appendChild(cornerBlock);
+
+  // Add hex codes as the header row with their background matching the color
+  for (let i = 0; i < colors.length; i++) {
+    const headerItem = document.createElement("div");
+    headerItem.className = "grid-item header-item";
+    headerItem.style.backgroundColor = colors[i];
+    headerItem.style.color = getTextColor(colors[i]); // Adjust text color for contrast
+    headerItem.innerText = colors[i];
+    gridContainer.appendChild(headerItem);
+  }
+
+  // Iterate through each color for the y-axis
+  for (let i = 0; i < colors.length; i++) {
+    // Create the header column for each row with matching background color
+    const headerCol = document.createElement("div");
+    headerCol.className = "grid-item header-item";
+    headerCol.style.backgroundColor = colors[i];
+    headerCol.style.color = getTextColor(colors[i]); // Adjust text color for contrast
+    headerCol.innerText = colors[i];
+    gridContainer.appendChild(headerCol);
+
+    // Iterate through each color for the x-axis
+    for (let j = 0; j < colors.length; j++) {
+      // Create a grid item element
+      const gridItem = document.createElement("div");
+      gridItem.className = "grid-item";
+      gridItem.style.backgroundColor = colors[i];
+      gridItem.style.color = colors[j];
+
+      // Set initial content
+      gridItem.innerHTML = `<div class="loading">Loading...</div>`;
+
+      // Fetch the contrast details and update the grid item
+      const contrastData = await fetchContrastDetails(colors[j], colors[i]);
+      const ratio = contrastData.ratio;
+      const aaLarge = contrastData.AALarge === "pass" ? "✅" : "❌";
+      const aa = contrastData.AA === "pass" ? "✅" : "❌";
+      const aaa = contrastData.AAA === "pass" ? "✅" : "❌";
+
+      gridItem.querySelector('.loading').innerHTML = `
+        Contrast Ratio: ${ratio}<br>
+        AA Large Text: ${aaLarge}<br>
+        AA: ${aa}<br>
+        AAA: ${aaa}
+      `;
+
+      // Highlight the grid item if all levels pass
+      if (aaLarge === "✅" && aa === "✅" && aaa === "✅") {
+        gridItem.classList.add("highlight");
+      }
+
+      // Add the grid item to the grid container
+      gridContainer.appendChild(gridItem);
+    }
+  }
+}
+
+// Utility function to adjust text color based on background color for better contrast
+function getTextColor(hexColor) {
+  // Convert hex to RGB
+  const rgb = hexColor.replace('#', '').match(/.{1,2}/g).map(x => parseInt(x, 16));
+  // Calculate the luminance of the color
+  const luminance = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+  // Return white for dark colors, black for light colors
+  return luminance > 0.5 ? "#000000" : "#ffffff";
+}
+
+// Create the color grid
+createColorGrid(colors);
+
+</script>
+
+</body>
+</html>
